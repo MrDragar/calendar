@@ -18,6 +18,7 @@ class Presenter(QtWidgets.QApplication):
     def open_main_window(self):
         self.MainUI.setupUi(self.MainWindow)
         self.MainUI.pushButton_forw.clicked.connect(self.go_forward)
+        self.MainUI.pushButton_back.clicked.connect(self.go_back)
         self.set_data()
 
     def set_data(self):
@@ -31,8 +32,9 @@ class Presenter(QtWidgets.QApplication):
 
     def go_forward(self):
         self.calendar_model.plus_month()
-        print(1)
         self.set_data()
-        pass
 
-    pass
+    def go_back(self):
+        self.calendar_model.minus_month()
+        self.set_data()
+

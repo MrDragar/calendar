@@ -607,7 +607,7 @@ class Ui_Calendar(object):
 
     def set_data (self, year, month, first_week, first_wday, day_count, day, current_data):
         self.label_year.setText(str(year))
-        self.label_month.setText(self.months[month - 1])
+        self.label_month.setText(self.months[month])
         for i in self.days_buttons:
             i.setStyleSheet("background: white; width: 100%; height: 100%; border: none")
             i.setText("")
