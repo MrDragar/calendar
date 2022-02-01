@@ -4,9 +4,9 @@ from view.NewEvent_window import Ui_NewEvent
 from model.calendar_model import CalendarModel
 
 
-class Presenter(QtWidgets.QApplication):
+class Controller(QtWidgets.QApplication):
     def __init__(self, sys_argv):
-        super(Presenter, self).__init__(sys_argv)
+        super(Controller, self).__init__(sys_argv)
         self.MainWindow = QtWidgets.QMainWindow()
         self.MainUI = Ui_Calendar()
         self.calendar_model = CalendarModel()
